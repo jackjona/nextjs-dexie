@@ -35,7 +35,7 @@ const AddFriendForm = () => {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="border-2 border-gray-600 rounded-md text-center"
+          className="border-2 border-gray-600 rounded-md text-center text-black"
           required
         />
         Age:
@@ -43,7 +43,7 @@ const AddFriendForm = () => {
           type="number"
           value={age}
           onChange={(e) => setAge(Number(e.target.value))}
-          className="border-2 border-gray-600 rounded-md text-center"
+          className="border-2 border-gray-600 rounded-md text-center text-black"
           required
         />
       </div>
