@@ -7,21 +7,21 @@ const FriendList = () => {
   const friends = useLiveQuery(() => db.friends.toArray());
 
   return (
-    <ul className="min-w-full">
+    <ul className="w-[60%] dark:bg-[#414141] dark:text-black text-white rounded-xl">
       {friends?.map((friend) => (
         <li
           key={friend.id}
-          className="flex justify-between bg-gray-100 p-3 mb-2 px-10"
+          className="flex justify-between dark:bg-[#414141] bg-gray-100 py-3 px-4 text-white rounded-lg"
         >
-          <div>
-            <span className="font-semibold">Name:</span> {friend.name}
+          <div className='text-black dark:text-white'>
+            <span className="font-semibold text-lg">Name:</span> {friend.name}
             <br />
-            <span className="font-semibold">Age:</span> {friend.age}
+            <span className="font-semibold text-lg">Age:</span> {friend.age}
           </div>
           <button
             onClick={() => db.friends.delete(friend.id)}
             title="Delete item"
-            className="bg-red-600 px-2 font-semibold text-sm rounded-xl text-white hover:bg-red-700"
+            className="bg-red-600 px-8 font-semibold text-sm rounded-xl text-white hover:bg-red-700"
           >
             Delete
           </button>
